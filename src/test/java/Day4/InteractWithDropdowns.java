@@ -22,38 +22,37 @@ public class InteractWithDropdowns {
                new BrowserType.LaunchOptions().setHeadless(false)
         ).newPage();
 
-//       page.navigate("https://www.testmuai.com/selenium-playground/select-dropdown-demo/");
-//       Locator dropDownLocator = page.locator("Select#select-demo");
+       page.navigate("https://www.testmuai.com/selenium-playground/select-dropdown-demo/");
+       Locator dropDownLocator = page.locator("Select#select-demo");
 
         //Select by value
-//        dropDownLocator.selectOption("Wednesday");
-//        assertThat(page.locator("p.selected-value")).containsText("Wednesday");
+        dropDownLocator.selectOption("Wednesday");
+        assertThat(page.locator("p.selected-value")).containsText("Wednesday");
 //
 //        Select by label
-//        dropDownLocator.selectOption(new SelectOption().setValue("Tuesday"));
-//        assertThat(page.locator("p.selected-value")).containsText("Tuesday");
+        dropDownLocator.selectOption(new SelectOption().setValue("Tuesday"));
+        assertThat(page.locator("p.selected-value")).containsText("Tuesday");
 
         // Select by index
-//        dropDownLocator.selectOption(new SelectOption().setIndex(2));
+        dropDownLocator.selectOption(new SelectOption().setIndex(2));
 
         //Select multiple options
-//        Locator statesmultiDropdown = page.locator("Select#multi-select");
-//        statesmultiDropdown.selectOption(new String[] {"Texas", "New Jersey", "Ohio"});
-//        Locator lastOptionButton = page.locator("#printAll");
-//        lastOptionButton.click();
-//        Locator options = statesmultiDropdown.locator("option");
-//        System.out.println(options.count());
-//        List<String> allInnerTexts = options.allInnerTexts();
-//        allInnerTexts.forEach(option-> System.out.println(option));
+        Locator statesmultiDropdown = page.locator("Select#multi-select");
+        statesmultiDropdown.selectOption(new String[] {"Texas", "New Jersey", "Ohio"});
+        Locator lastOptionButton = page.locator("#printAll");
+        lastOptionButton.click();
+        Locator options = statesmultiDropdown.locator("option");
+        System.out.println(options.count());
+        List<String> allInnerTexts = options.allInnerTexts();
+        allInnerTexts.forEach(option-> System.out.println(option));
 
         //Select Jquery
         page.navigate(jqueryDropdownURL);
-//        Locator countryjqueryDropdown = page.locator("span.select2-selection").first();
-//        countryjqueryDropdown.click();
-//        Locator country = page.locator("span.select2-results ul li ",
-//                new Page.LocatorOptions().setHasText("India"));
-//        country.click();
-
+        Locator countryjqueryDropdown = page.locator("span.select2-selection").first();
+        countryjqueryDropdown.click();
+        Locator country = page.locator("span.select2-results ul li ",
+                new Page.LocatorOptions().setHasText("India"));
+        country.click();
         Locator files = page.locator("select#files");
 
         files.selectOption("Ruby");
