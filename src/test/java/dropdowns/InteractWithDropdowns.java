@@ -1,4 +1,4 @@
-package Day4;
+package dropdowns;
 
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;

@@ -1,4 +1,4 @@
-package Day5;
+package screenshots;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Locator;
@@ -7,7 +7,6 @@ import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.ScreenshotCaret;
 
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 public class LearnScreenshots {
     public static void main(String[] args){

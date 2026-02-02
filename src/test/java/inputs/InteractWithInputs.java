@@ -1,4 +1,4 @@
-package Day3;
+package inputs;
 
 import com.microsoft.playwright.*;
 
